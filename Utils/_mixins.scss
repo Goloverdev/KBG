@@ -1,0 +1,11 @@
+@mixin image_fond ($url:$url_general, $type_background:contain, $couleur_fond:$couleur_fond_gen) {
+    background-image: url($url);
+    background-size:$type_background;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-color:$couleur_fond;
+}
+
+@mixin police ($police_principale:"fanwood") {
+	font-family:$police_principale, "verdana", "georgia", "times new roman";
+}

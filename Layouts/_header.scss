@@ -1,0 +1,36 @@
+header
+{
+	margin:0rem 0rem 0rem 0rem;
+	padding: 0.2rem 0rem 0.5rem 0rem;
+	background-color:$couleur_fond_2;
+	width:100%;
+	font-size:3.2rem;
+	position:relative;
+	.row
+		{
+		height:9.6rem;
+		}
+}
+.header 
+{
+	&__logo
+	{
+		position:absolute;
+		bottom:-40%;
+		left:70%;
+		width:12rem;
+		height:auto; /*adaptation de la taille de l'image avec proportions conservées */
+	}
+	&__valeur--2
+	{
+		padding-top:3.2rem;
+	}
+	&__valeur--3
+	{
+		padding-top:6.4rem;
+	}
+	&__valeur--sommet 
+	{
+	font-size:9.6rem;
+	}
+}
