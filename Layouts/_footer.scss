@@ -1,0 +1,31 @@
+.papillon{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    perspective:50rem;
+}
+.btn{
+    font-size:2rem;
+    border:0.5rem green dashed;
+    background-color:blue;
+    &:active +.papillon{
+        transform:translateY(-7rem);
+        &>.aileG{
+            transform:rotate3d(0.75, 0.75, 0.75, 45deg) translateZ(1vw);
+        }
+        &>.aileD{
+            transform:rotate3d(0.75, 0.75, 0.75, -45deg) translateZ(1vw);
+        }
+    }
+}
+.aileG{
+    transform-origin:50% 0%;
+    transition:100ms ease-in-out;
+}
+.aileD{
+    transform-origin:50% 100%;
+    transition:100ms ease-in-out;
+}
+.papillon{
+    transform-style:preserve-3d;
+}

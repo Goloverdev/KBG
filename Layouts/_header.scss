@@ -7,9 +7,13 @@ header
 	font-size:3.2rem;
 	position:relative;
 	.row
-		{
+	{
 		height:9.6rem;
+		&--petit
+		{
+			height:8rem;
 		}
+	}
 }
 .header 
 {
@@ -20,17 +24,26 @@ header
 		left:70%;
 		width:12rem;
 		height:auto; /*adaptation de la taille de l'image avec proportions conservées */
+		&--gauche
+		{
+		height:8rem;
+		width:auto; /*adaptation de la taille de l'image avec proportions conservées */
+		}
 	}
-	&__valeur--2
+	&__valeur2
 	{
 		padding-top:3.2rem;
 	}
-	&__valeur--3
+	&__valeur3
 	{
 		padding-top:6.4rem;
 	}
-	&__valeur--sommet 
+	&__valeursom 
 	{
 	font-size:9.6rem;
+		&--pages
+		{
+		font-size:8rem;
+		}
 	}
 }

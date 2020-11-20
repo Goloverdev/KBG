@@ -9,3 +9,30 @@
 @mixin police ($police_principale:"fanwood") {
 	font-family:$police_principale, "verdana", "georgia", "times new roman";
 }
+@mixin col ($map:$cols) {
+    @each $col, $marg in $map{
+        &-#{$col}{
+        margin-left:$marg;
+        }
+    }
+}
+@mixin responsive ($map:$breakpoint) {
+    @each $app, $name in $map{
+        @media (min-width:map-get($name, min)) and (max-width:map-get($name, max)){
+        font-size:calc(62.5%* (#{map-get($name, abs)}/1350));
+        background-size:calc(100%*(#{map-get($name, abs)}/1350)), auto;
+        }
+    }
+}
+@mixin puce ($map:$breakpoint) {
+    @each $app, $name in $map{
+        @media (min-width:map-get($name, min)) and (max-width:map-get($name, max)){
+        background-size:calc(100%*(#{map-get($name, abs)}/1350)), auto;
+        }
+    }
+}
+@mixin survol_lien ($couleur:$couleur_police) {
+    color:$couleur;
+    text-decoration:none;
+    @content;
+}

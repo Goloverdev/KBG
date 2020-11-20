@@ -1,17 +1,234 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import ".Base/typography";
- *   |         ^^^^^^^^^^^^^^^^^^
- *   '
- *   KBG_main.scss 1:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \".Base/typography\";\a   \2502          ^^^^^^^^^^^^^^^^^^\a   \2575 \a   KBG_main.scss 1:9  root stylesheet";
+@charset "UTF-8";
+@font-face {
+  font-family: "fanwood";
+  src: url("Police/Fanwood-webfont.eot");
+  src: url("Police/Fanwood-webfont.eot?#iefix") format("embedded-opentype"), url("Police/Fanwood-webfont.woff2") format("woff2"), url("Police/Fanwood-webfont.woff") format("woff"), url("Police/Fanwood-webfont.ttf") format("truetype"), url("Police/Fanwood-webfont.svg#fanwoodregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
+@font-face {
+  font-family: "ecza";
+  src: url("Police/Eczar-Regular-webfont.eot");
+  src: url("Police/Eczar-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Police/Eczar-Regular-webfont.woff2") format("woff2"), url("Police/Eczar-Regular-webfont.woff") format("woff"), url("Police/Eczar-Regular-webfont.ttf") format("truetype"), url("Police/Eczar-Regular-webfont.svg#eczarregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 62.5%;
+  /*méthode pour que 1rem = 10px */
+}
+@media (min-width: 0px) and (max-width: 575px) {
+  html {
+    font-size: calc(62.5%* (575/1350));
+    background-size: calc(100%*(575/1350)), auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  html {
+    font-size: calc(62.5%* (768/1350));
+    background-size: calc(100%*(768/1350)), auto;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  html {
+    font-size: calc(62.5%* (992/1350));
+    background-size: calc(100%*(992/1350)), auto;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  html {
+    font-size: calc(62.5%* (1200/1350));
+    background-size: calc(100%*(1200/1350)), auto;
+  }
+}
+
+body {
+  /*mettre une image en arrière plan  */
+  background-image: url("Pictures/Fond1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  color: white;
+  /*couleur police */
+  margin: 0rem 0rem 0rem 0rem;
+  font-family: "fanwood", "verdana", "georgia", "times new roman";
+  font-size: 3rem;
+  height: 85.3rem;
+}
+
+header {
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 0.2rem 0rem 0.5rem 0rem;
+  background-color: #77901b;
+  width: 100%;
+  font-size: 3.2rem;
+  position: relative;
+}
+header .row {
+  height: 9.6rem;
+}
+header .row--petit {
+  height: 8rem;
+}
+
+.header__logo {
+  position: absolute;
+  bottom: -40%;
+  left: 70%;
+  width: 12rem;
+  height: auto;
+  /*adaptation de la taille de l'image avec proportions conservées */
+}
+.header__logo--gauche {
+  height: 8rem;
+  width: auto;
+  /*adaptation de la taille de l'image avec proportions conservées */
+}
+.header__valeur2 {
+  padding-top: 3.2rem;
+}
+.header__valeur3 {
+  padding-top: 6.4rem;
+}
+.header__valeursom {
+  font-size: 9.6rem;
+}
+.header__valeursom--pages {
+  font-size: 8rem;
+}
+
+nav {
+  min-height: 20rem;
+  margin-top: 4rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+nav a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.nav__liste {
+  list-style: none;
+  font-family: "fanwood", "verdana", "georgia", "times new roman";
+}
+.nav__liste--transparent {
+  background-color: rgba(15, 12, 2, 0.8);
+  border-radius: 50%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.nav__liste--transparent li {
+  background-image: url("Pictures/puce.png");
+  background-repeat: no-repeat;
+  background-position: -5% 50%;
+  height: 8rem;
+  line-height: 8rem;
+  padding-left: 3.5rem;
+  font-size: 2.9rem;
+}
+@media (min-width: 0px) and (max-width: 575px) {
+  .nav__liste--transparent li {
+    background-size: calc(100%*(575/1350)), auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .nav__liste--transparent li {
+    background-size: calc(100%*(768/1350)), auto;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .nav__liste--transparent li {
+    background-size: calc(100%*(992/1350)), auto;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .nav__liste--transparent li {
+    background-size: calc(100%*(1200/1350)), auto;
+  }
+}
+.nav__liste--transparent li:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #967814;
+}
+
+.container {
+  margin-right: -2rem;
+  margin-left: -2rem;
+}
+
+.col-offset-1 {
+  margin-left: 8.33%;
+}
+.col-offset-2 {
+  margin-left: 16.66%;
+}
+.col-offset-3 {
+  margin-left: 25%;
+}
+.col-offset-4 {
+  margin-left: 33.33%;
+}
+.col-offset-5 {
+  margin-left: 41.66%;
+}
+.col-offset-6 {
+  margin-left: 50%;
+}
+.col-offset-7 {
+  margin-left: 58.33%;
+}
+.col-offset-8 {
+  margin-left: 66.66%;
+}
+.col-offset-9 {
+  margin-left: 75%;
+}
+.col-offset-10 {
+  margin-left: 83.33%;
+}
+.col-offset-11 {
+  margin-left: 91.66%;
+}
+
+.papillon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 50rem;
+}
+
+.btn {
+  font-size: 2rem;
+  border: 0.5rem green dashed;
+  background-color: blue;
+}
+.btn:active + .papillon {
+  transform: translateY(-7rem);
+}
+.btn:active + .papillon > .aileG {
+  transform: rotate3d(0.75, 0.75, 0.75, 45deg) translateZ(1vw);
+}
+.btn:active + .papillon > .aileD {
+  transform: rotate3d(0.75, 0.75, 0.75, -45deg) translateZ(1vw);
+}
+
+.aileG {
+  transform-origin: 50% 0%;
+  transition: 100ms ease-in-out;
+}
+
+.aileD {
+  transform-origin: 50% 100%;
+  transition: 100ms ease-in-out;
+}
+
+.papillon {
+  transform-style: preserve-3d;
+}
+
+/*# sourceMappingURL=KBG_style.css.map */

@@ -1,0 +1,21 @@
+{
+  "name": "kbg",
+  "version": "1.0.0",
+  "description": "Projet de site français (mais trilingue allemand et anglais) consacré au syndrome KBG (syndrome génétique rare). Destiné à informer les familles au mieux.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch KBG_main.scss:KBG_style.css",
+    "prefix":"postcss KBG_style.css --use autoprefixer -d ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Goloverdev/KBG.git"
+  },
+  "author": "Vanessa",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/Goloverdev/KBG/issues"
+  },
+  "homepage": "https://github.com/Goloverdev/KBG#readme"
+}

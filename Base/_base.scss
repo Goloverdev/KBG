@@ -1,5 +1,6 @@
 html {
 	font-size:62.5%; /*méthode pour que 1rem = 10px */
+	@include responsive;
 }
 body
 {

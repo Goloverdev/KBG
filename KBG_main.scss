@@ -1,12 +1,13 @@
-@import ".Base/typography";
-@import ".Utils/variables";
-@import ".Utils/mixins";
-@import ".Utils/functions";
-@import ".Base/base";
-@import ".Layouts/header";
-@import ".Layouts/nav";
-@import ".Layouts/container";
-@import ".Vendors/mediaqueries";
+@import "Base/typography";
+@import "Utils/variables";
+@import "Utils/mixins";
+@import "Utils/maps";
+@import "Utils/functions";
+@import "Base/base";
+@import "Layouts/header";
+@import "Layouts/nav";
+@import "Layouts/container";
+@import "Layouts/footer";
 
 
 
