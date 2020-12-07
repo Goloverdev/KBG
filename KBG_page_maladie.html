@@ -9,17 +9,21 @@
 	</head>
 
 	<body>
-		<header>
+		<header class="w-75">
 			<div class="container-fluid"><!-- introduction d'une grille bootstrap prenant 100% de l'espace ds tous les cas-->
 				<div class="row row--petit"><!-- class différente pour l'entête allégée-->
-					<div class="col-offset-3 col-1"><img class="header__logo--gauche" src="Pictures/papillon.png" alt="logo"></div>
-					<p class="header__valeur--som header__valeur--pages col-1">KBG</p>
+					<div class="header__logo--bloc col-offset-3 col-1 h-100">
+						<img class="pap_aileG" src="Pictures/Aile_G.png">
+						<img class="pap_corps" src="Pictures/Papillon_corps.png">
+						<img class="pap_aileD" src="Pictures/Aile_D.png">
+					</div>
+					<p class="header__valeur--pages col-1">KBG</p>
 				</div>
 			</div>
 		</header>
 		<nav class="container-fluid"><!-- liste du menu -->
 			<div class="row">
-				<ul class="nav__liste nav__liste--transparent col-offset-1 col-5">
+				<ul class="nav__liste nav__liste--transparent border-dark rounded-circle col-offset-1 col-5">
 					<li class="col-offset-4 col-4">L'association</li>
 					<li class="col-offset-4 col-4"><a href="KBG_page_maladie.html">La maladie</a></li>
 					<li class="col-offset-4 col-4">Témoignages</li>
@@ -33,14 +37,7 @@
 		</section>
 
 		<footer>
-			<div class="btn">
-				appuyer
-			</div>
-			<div class="papillon">
-				<img class="aileG" src="Pictures/Aile_G.png">
-				<img class="corps" src="Pictures/Papillon_corps.png">
-				<img class="aileD" src="Pictures/Aile_D.png">
-			</div>
+
 		</footer>
 
 	</body>

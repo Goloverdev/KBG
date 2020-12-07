@@ -36,3 +36,16 @@
     text-decoration:none;
     @content;
 }
+@mixin anim ($nom, $propriete:rotateY){
+    @keyframes $nom{
+        @while $i<110{
+            #{i}&%{
+                transform:$propriete(0deg);
+            }
+            $i:$i+5;
+            #{i}&%{
+                transform:$propriete(90deg);
+            }     
+        }
+    }
+}

@@ -32,4 +32,9 @@ $breakpoint:(
         max:1200px,
         abs:1200
     )
+);
+$animation:(
+    0%:random(200),
+    5%:random(300),
+    10%:random(120),
 )

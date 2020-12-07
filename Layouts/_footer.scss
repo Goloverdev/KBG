@@ -1,4 +1,4 @@
-.papillon{
+/*.header_papillon{
     display:flex;
     justify-content:center;
     align-items:center;
@@ -11,21 +11,22 @@
     &:active +.papillon{
         transform:translateY(-7rem);
         &>.aileG{
-            transform:rotate3d(0.75, 0.75, 0.75, 45deg) translateZ(1vw);
+            transform:rotate3d(1, 1, 0, 90deg) translateZ(1vw);
         }
         &>.aileD{
-            transform:rotate3d(0.75, 0.75, 0.75, -45deg) translateZ(1vw);
+            transform:rotate3d(1, 1, 0, 90deg) translateZ(1vw);
         }
     }
 }
 .aileG{
-    transform-origin:50% 0%;
+    transform-origin:12% 100%;
     transition:100ms ease-in-out;
 }
 .aileD{
-    transform-origin:50% 100%;
+    transform-origin:0% 0%;
     transition:100ms ease-in-out;
 }
 .papillon{
     transform-style:preserve-3d;
 }
+*/

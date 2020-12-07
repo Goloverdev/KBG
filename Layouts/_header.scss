@@ -3,7 +3,6 @@ header
 	margin:0rem 0rem 0rem 0rem;
 	padding: 0.2rem 0rem 0.5rem 0rem;
 	background-color:$couleur_fond_2;
-	width:100%;
 	font-size:3.2rem;
 	position:relative;
 	.row
@@ -12,7 +11,13 @@ header
 		&--petit
 		{
 			height:8rem;
+			font-size:8rem;
 		}
+	}
+	div img{
+		height:8rem;
+		width:auto;
+		line-height:8Rem;
 	}
 }
 .header 
@@ -26,8 +31,25 @@ header
 		height:auto; /*adaptation de la taille de l'image avec proportions conservées */
 		&--gauche
 		{
-		height:8rem;
-		width:auto; /*adaptation de la taille de l'image avec proportions conservées */
+			height:8rem;
+			width:auto; /*adaptation de la taille de l'image avec proportions conservées */
+		}
+		&--bloc{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		animation:vol 10s infinite;
+			.pap{
+				&_aileG{
+					animation:battementG 600ms infinite;
+				}
+				&_aileD{
+					animation:battementD 600ms infinite;
+				}
+				&_corps{
+					transform:scaleZ(0.3);
+				}
+			}
 		}
 	}
 	&__valeur2
@@ -36,14 +58,14 @@ header
 	}
 	&__valeur3
 	{
-		padding-top:6.4rem;
+	padding-top:6.4rem;
 	}
 	&__valeursom 
 	{
 	font-size:9.6rem;
-		&--pages
-		{
-		font-size:8rem;
-		}
+	}
+	&__valeur--pages
+	{
+	font-size:8rem;
 	}
 }
