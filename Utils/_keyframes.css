@@ -190,6 +190,10 @@
     {
         transform:translate(170px, 72px) rotate(115deg);
     }
+    90%
+    {
+        transform:translate(177px, 90px) rotate(120deg);
+    }
     100% {
         animation-timing-function:cubic-bezier(.45,.34,.58,.98);
     }

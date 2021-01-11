@@ -1,7 +1,13 @@
-.container
+.container-fluid
 {
-	margin-right:-2rem;
-	margin-left:-2rem;
+	@include image_fond;
+}
+.p-accueil{
+	/*mettre une image en arrière plan  */
+
+}
+.pages{
+	background-color:white;
 }
 .col-offset{
 	@include col;

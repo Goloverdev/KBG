@@ -1,13 +1,20 @@
+.no-gutter > [class*='col-'] { /*suppression des gouttières par défaut des colonnes*/
+    padding-right:0;
+    padding-left:0;
+}
 header
 {
-	margin:0rem 0rem 0rem 0rem;
 	padding: 0.2rem 0rem 0.5rem 0rem;
 	background-color:$couleur_fond_2;
 	font-size:3.2rem;
-	position:relative;
+	height:9.6rem;
+	p{
+		height:3.2rem;
+		@include marges_int; /*mixin avec padding à 0 par défaut*/
+		@include marges; /*mixin avec margin à 0 par défaut*/
+	}
 	.row
 	{
-		height:9.6rem;
 		&--petit
 		{
 			height:8rem;
@@ -16,56 +23,60 @@ header
 	}
 	div img{
 		height:8rem;
-		width:auto;
-		line-height:8Rem;
+		width:auto; /*l'image s'adapte par rapport à son container*/
+		line-height:8rem;
 	}
 }
 .header 
 {
 	&__logo
 	{
-		position:absolute;
-		bottom:-40%;
-		left:70%;
 		width:12rem;
 		height:auto; /*adaptation de la taille de l'image avec proportions conservées */
 		&--gauche
 		{
-			height:8rem;
+			height:5rem;
 			width:auto; /*adaptation de la taille de l'image avec proportions conservées */
 		}
 		&--bloc{
 		display:flex;
 		justify-content:center;
 		align-items:center;
-		animation:vol 10s infinite;
+		animation:vol 6s infinite;
 			.pap{
 				&_aileG{
-					animation:battementG 600ms infinite;
+					animation:battementG 800ms infinite; /*battements d'une durée de 6 secondes qui se répètent indéfiniment*/
 				}
 				&_aileD{
-					animation:battementD 600ms infinite;
+					animation:battementD 800ms infinite; /*battements d'une durée de 6 secondes qui se répètent indéfiniment*/
 				}
 				&_corps{
-					transform:scaleZ(0.3);
+					animation-fill-mode:backwards; /*la posiion du papillon est celle de 0% dans le keyframe*/
 				}
 			}
 		}
 	}
+	&__valeur1
+	{
+	}
 	&__valeur2
 	{
-		padding-top:3.2rem;
+		@include marges($top:2.8rem); /*mixin avec margin à 0 sauf pour top*/
 	}
 	&__valeur3
 	{
-	padding-top:6.4rem;
+		@include marges($top:5rem); /*mixin avec margin à 0 sauf pour top*/
 	}
 	&__valeursom 
 	{
-	font-size:9.6rem;
+		font-size:10.8rem;
+		@include marges($top:-2.4rem); /*mixin avec margin à 0 sauf pour top*/
+		text-align:right; /*le texte toujours aligné à droite, peu importe le nb de col occupées*/
 	}
 	&__valeur--pages
 	{
-	font-size:8rem;
+		font-size:9.6rem;
+		height:9.6rem;
+		@include marges($top:-1.0rem);
 	}
 }

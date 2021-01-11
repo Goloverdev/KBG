@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- ceci est mon CV destiné aux employeurs -->
 		<meta charset="UTF-8"/> <!-- norme utilisée (la plus importante et courante) -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 		<link rel="stylesheet" href="KBG_style.css" />
@@ -9,37 +8,42 @@
 	</head>
 
 	<body>
-		<header class="w-75">
-			<div class="container-fluid"><!-- introduction d'une grille bootstrap prenant 100% de l'espace ds tous les cas-->
-				<div class="row row--petit"><!-- class différente pour l'entête allégée-->
-					<div class="header__logo--bloc col-offset-3 col-1 h-100">
-						<img class="pap_aileG" src="Pictures/Aile_G.png">
-						<img class="pap_corps" src="Pictures/Papillon_corps.png">
-						<img class="pap_aileD" src="Pictures/Aile_D.png">
+		<div class="container-fluid w-100 m-0 pr-5 pl-5"> <!-- container principal bootstrap, full width, 0 marge fond blanc-->
+			<div class="pages">
+				<header class="w-100"> <!-- introduction d'une grille bootstrap prenant 100% de l'espace ds tous les cas-->
+					<div class="row row--petit"><!-- class différente pour l'entête allégée-->
+						<div class="header__logo--bloc col-offset-3 col-1 h-100">
+							<img class="pap_aileG" src="Pictures/Aile_G.png">
+							<img class="pap_corps" src="Pictures/Papillon_corps.png">
+							<img class="pap_aileD" src="Pictures/Aile_D.png">
+						</div>
+						<p class="header__valeur--pages col-1">KBG</p>
 					</div>
-					<p class="header__valeur--pages col-1">KBG</p>
-				</div>
-			</div>
-		</header>
-		<nav class="container-fluid"><!-- liste du menu -->
-			<div class="row">
-				<ul class="nav__liste nav__liste--transparent border-dark rounded-circle col-offset-1 col-5">
-					<li class="col-offset-4 col-4">L'association</li>
-					<li class="col-offset-4 col-4"><a href="KBG_page_maladie.html">La maladie</a></li>
-					<li class="col-offset-4 col-4">Témoignages</li>
-					<li class="col-offset-4 col-4">Forum</li>
-					<li class="col-offset-4 col-4">Contact</li>
-				</ul>
-			</div>
-		</nav>
+				</header>
+				<nav class="row"><!-- liste du menu -->
+					<ul class="nav__liste nav__liste--transparent border-dark rounded-circle col-offset-1 col-5">
+						<li class="col-offset-4 col-4">L'association</li>
+						<li class="col-offset-4 col-4"><a href="KBG_page_maladie.html">La maladie</a></li>
+						<li class="col-offset-4 col-4">Témoignages</li>
+						<li class="col-offset-4 col-4">Forum</li>
+						<li class="col-offset-4 col-4">Contact</li>
+					</ul>
+				</nav>
 			
-		<section>
-		</section>
+				<section>
+				</section>
 
-		<footer>
-
-		</footer>
-
+				<footer class="row">
+					<div class="cube">	
+						<div class="front">FRONT</div>
+						<div class="back">BACK</div>
+						<div class="right">RIGHT</div>
+						<div class="left">LEFT</div>
+						<div class="top">TOP</div>
+						<div class="bottom">BOTTOM</div>
+					</div>
+				</footer>
+			</div>
+		</div>
 	</body>
-
 </html>

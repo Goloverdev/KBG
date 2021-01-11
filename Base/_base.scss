@@ -1,14 +1,13 @@
 html {
 	font-size:62.5%; /*méthode pour que 1rem = 10px */
-	@include responsive;
+	@include resize;
 }
 body
 {
-	 /*mettre une image en arrière plan  */
-	@include image_fond;
 	color:$couleur_police; /*couleur police */
 	margin:0rem 0rem 0rem 0rem;
 	@include police;
 	font-size:3rem;
 	height:85.3rem;
+	box-sizing:content-box;
 }

@@ -16,7 +16,7 @@
 @keyframes battementG {
   0% {
     transform-origin: right;
-    transform: translateZ(0.01) rotateY(0deg);
+    transform: rotateY(0deg);
   }
   5% {
     transform: rotateY(90deg);
@@ -59,13 +59,13 @@
   }
   100% {
     transform-origin: right;
-    transform: scaleZ(0.01) rotateY(80deg);
+    transform: rotateY(80deg);
   }
 }
 @keyframes battementD {
   0% {
     transform-origin: left;
-    transform: scaleZ(0.01) rotateY(0deg);
+    transform: rotateY(0deg);
   }
   5% {
     transform: rotateY(90deg);
@@ -108,90 +108,128 @@
   }
   100% {
     transform-origin: left;
-    transform: scaleZ(0.01) rotateY(80deg);
+    transform: rotateY(80deg);
   }
 }
 @keyframes vol {
+  0% {
+    transform: translate(-360px, 300px) rotate(10deg);
+    animation-timing-function: cubic-bezier(0.66, 0.28, 0.85, 0.76);
+  }
+  5% {
+    /*animation-timing-function:cubic-bezier(.41,.54,.9,.79);*/
+    transform: translate(-338px, 220px) rotate(20deg);
+  }
+  10% {
+    transform: translate(-326px, 200px) rotate(30deg);
+  }
   15% {
-    transform: rotate3d(0, 0, 1, 90deg) translate(20vh);
+    transform: translate(-310px, 175px) rotate(39deg);
   }
   20% {
-    transform-origin: right;
-    transform: rotate3d(0.5, 0.5, 0, 90deg) translate(10vw, 10vh);
+    transform: translate(-270px, 145px) rotate(45deg);
+  }
+  25% {
+    transform: translate(-234px, 112px) rotate(55deg);
+  }
+  30% {
+    transform: translate(-150px, 72px) rotate(68deg);
+  }
+  35% {
+    transform: translate(-80px, 50px) rotate(80deg);
+  }
+  40% {
+    transform: translate(-80px, 43px) rotate(90deg);
   }
   45% {
-    transform: translate(70vw, 20vh);
+    transform: translate(-10px, 37px) rotate(90deg);
   }
   50% {
-    transform: rotate3d(1, 1, 1, 200);
+    transform: translate(20px, 35x) rotate(90deg);
+  }
+  55% {
+    transform: translate(60px, 35px) rotate(94deg);
+  }
+  60% {
+    transform: translate(100px, 40px) rotate(97deg);
+  }
+  65% {
+    transform: translate(135px, 45px) rotate(100deg);
   }
   70% {
-    transform: translate(15vw, 40vh) rotate3d(1, 1, 1, 380deg);
+    transform: translate(152px, 55px) rotate(105deg);
   }
-  77% {
-    transform: translate(20vw, 70vh);
+  75% {
+    transform: translate(162px, 62px) rotate(110deg);
   }
-  85% {
-    transform: rotate3d(1, 1, 1, 50deg);
+  80% {
+    transform: translate(170px, 72px) rotate(115deg);
   }
   100% {
-    transform-origin: top;
-    transform: scaleZ(0.01) translate(60vw, 80vh) rotate3d(1, 1, 1, 0deg);
+    animation-timing-function: cubic-bezier(0.45, 0.34, 0.58, 0.98);
   }
 }
 html {
   font-size: 62.5%;
   /*méthode pour que 1rem = 10px */
+  /*mixin pour adapter les rem selon taille de l'écran (pour plus de breakpoints, en ajouter dans la map) */
 }
 @media (min-width: 0px) and (max-width: 575px) {
   html {
-    font-size: calc(62.5%* (575/1350));
-    background-size: calc(100%*(575/1350)), auto;
+    font-size: calc(62.5%*(575/1350));
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
   html {
-    font-size: calc(62.5%* (768/1350));
-    background-size: calc(100%*(768/1350)), auto;
+    font-size: calc(62.5%*(768/1350));
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
   html {
-    font-size: calc(62.5%* (992/1350));
-    background-size: calc(100%*(992/1350)), auto;
+    font-size: calc(62.5%*(992/1350));
   }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   html {
-    font-size: calc(62.5%* (1200/1350));
-    background-size: calc(100%*(1200/1350)), auto;
+    font-size: calc(62.5%*(1200/1350));
+  }
+}
+@media (min-width: 1351px) and (max-width: 1351px) {
+  html {
+    font-size: calc(62.5%*(1351/1350));
   }
 }
 
 body {
-  /*mettre une image en arrière plan  */
-  background-image: url("Pictures/Fond1.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: black;
   color: white;
   /*couleur police */
   margin: 0rem 0rem 0rem 0rem;
   font-family: "fanwood", "verdana", "georgia", "times new roman";
   font-size: 3rem;
   height: 85.3rem;
+  box-sizing: content-box;
+}
+
+.no-gutter > [class*=col-] {
+  /*suppression des gouttières par défaut des colonnes*/
+  padding-right: 0;
+  padding-left: 0;
 }
 
 header {
-  margin: 0rem 0rem 0rem 0rem;
   padding: 0.2rem 0rem 0.5rem 0rem;
   background-color: #77901b;
   font-size: 3.2rem;
-  position: relative;
-}
-header .row {
   height: 9.6rem;
+}
+header p {
+  height: 3.2rem;
+  /*padding à zéro par défaut*/
+  padding: 0 0 0 0;
+  /*mixin avec padding à 0 par défaut*/
+  /*marges à zéro par défaut*/
+  margin: 0 0 0 0;
+  /*mixin avec margin à 0 par défaut*/
 }
 header .row--petit {
   height: 8rem;
@@ -200,19 +238,17 @@ header .row--petit {
 header div img {
   height: 8rem;
   width: auto;
-  line-height: 8Rem;
+  /*l'image s'adapte par rapport à son container*/
+  line-height: 8rem;
 }
 
 .header__logo {
-  position: absolute;
-  bottom: -40%;
-  left: 70%;
   width: 12rem;
   height: auto;
   /*adaptation de la taille de l'image avec proportions conservées */
 }
 .header__logo--gauche {
-  height: 8rem;
+  height: 5rem;
   width: auto;
   /*adaptation de la taille de l'image avec proportions conservées */
 }
@@ -220,28 +256,43 @@ header div img {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: vol 10s infinite;
+  animation: vol 6s infinite;
 }
 .header__logo--bloc .pap_aileG {
-  animation: battementG 600ms infinite;
+  animation: battementG 800ms infinite;
+  /*battements d'une durée de 6 secondes qui se répètent indéfiniment*/
 }
 .header__logo--bloc .pap_aileD {
-  animation: battementD 600ms infinite;
+  animation: battementD 800ms infinite;
+  /*battements d'une durée de 6 secondes qui se répètent indéfiniment*/
 }
 .header__logo--bloc .pap_corps {
-  transform: scaleZ(0.3);
+  animation-fill-mode: backwards;
+  /*la posiion du papillon est celle de 0% dans le keyframe*/
 }
 .header__valeur2 {
-  padding-top: 3.2rem;
+  /*marges à zéro par défaut*/
+  margin: 2.8rem 0 0 0;
+  /*mixin avec margin à 0 sauf pour top*/
 }
 .header__valeur3 {
-  padding-top: 6.4rem;
+  /*marges à zéro par défaut*/
+  margin: 5rem 0 0 0;
+  /*mixin avec margin à 0 sauf pour top*/
 }
 .header__valeursom {
-  font-size: 9.6rem;
+  font-size: 10.8rem;
+  /*marges à zéro par défaut*/
+  margin: -2.4rem 0 0 0;
+  /*mixin avec margin à 0 sauf pour top*/
+  text-align: right;
+  /*le texte toujours aligné à droite, peu importe le nb de col occupées*/
 }
 .header__valeur--pages {
-  font-size: 8rem;
+  font-size: 9.6rem;
+  height: 9.6rem;
+  /*marges à zéro par défaut*/
+  margin: -1rem 0 0 0;
 }
 
 nav {
@@ -269,7 +320,7 @@ nav a:hover {
 .nav__liste--transparent li {
   background-image: url("Pictures/puce.png");
   background-repeat: no-repeat;
-  background-position: -5% 50%;
+  background-position: -0.8rem 50%;
   position: relative;
   height: 8rem;
   line-height: 8rem;
@@ -279,22 +330,27 @@ nav a:hover {
 }
 @media (min-width: 0px) and (max-width: 575px) {
   .nav__liste--transparent li {
-    background-size: calc(100%*(575/1350)), auto;
+    background-size: calc(30px*(575/1350)), auto;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
   .nav__liste--transparent li {
-    background-size: calc(100%*(768/1350)), auto;
+    background-size: calc(30px*(768/1350)), auto;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
   .nav__liste--transparent li {
-    background-size: calc(100%*(992/1350)), auto;
+    background-size: calc(30px*(992/1350)), auto;
   }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .nav__liste--transparent li {
-    background-size: calc(100%*(1200/1350)), auto;
+    background-size: calc(30px*(1200/1350)), auto;
+  }
+}
+@media (min-width: 1351px) and (max-width: 1351px) {
+  .nav__liste--transparent li {
+    background-size: calc(30px*(1351/1350)), auto;
   }
 }
 .nav__liste--transparent li:hover::after {
@@ -302,7 +358,7 @@ nav a:hover {
 }
 .nav__liste--transparent li::after {
   content: "";
-  width: 13.75vw;
+  width: 18.7rem;
   opacity: 0;
   height: 8rem;
   position: absolute;
@@ -314,12 +370,49 @@ nav a:hover {
   z-index: -1;
   background-image: url("Pictures/puce.png");
   background-repeat: no-repeat;
-  background-position: -5% 50%;
+  background-position: -0.8rem 50%;
+}
+@media (min-width: 0px) and (max-width: 575px) {
+  .nav__liste--transparent li::after {
+    background-size: calc(30px*(575/1350)), auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .nav__liste--transparent li::after {
+    background-size: calc(30px*(768/1350)), auto;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .nav__liste--transparent li::after {
+    background-size: calc(30px*(992/1350)), auto;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .nav__liste--transparent li::after {
+    background-size: calc(30px*(1200/1350)), auto;
+  }
+}
+@media (min-width: 1351px) and (max-width: 1351px) {
+  .nav__liste--transparent li::after {
+    background-size: calc(30px*(1351/1350)), auto;
+  }
 }
 
-.container {
-  margin-right: -2rem;
-  margin-left: -2rem;
+.container-fluid {
+  background-image: url("Pictures/Fond1.jpg");
+  background-size: 135rem, auto;
+  /*largeur définie en rem pour le responsive, hauteur auto*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+}
+
+.p-accueil {
+  /*mettre une image en arrière plan  */
+}
+
+.pages {
+  background-color: white;
 }
 
 .col-offset-1 {
@@ -357,36 +450,67 @@ nav a:hover {
 }
 
 /*.header_papillon{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    perspective:50rem;
-}
-.btn{
-    font-size:2rem;
-    border:0.5rem green dashed;
-    background-color:blue;
-    &:active +.papillon{
-        transform:translateY(-7rem);
-        &>.aileG{
-            transform:rotate3d(1, 1, 0, 90deg) translateZ(1vw);
-        }
-        &>.aileD{
-            transform:rotate3d(1, 1, 0, 90deg) translateZ(1vw);
-        }
-    }
-}
-.aileG{
-    transform-origin:12% 100%;
-    transition:100ms ease-in-out;
-}
-.aileD{
-    transform-origin:0% 0%;
-    transition:100ms ease-in-out;
-}
-.papillon{
-    transform-style:preserve-3d;
-}
+
 */
+footer {
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.cube {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  padding: 0rem;
+  transform-style: preserve-3d;
+  margin-left: 20px;
+}
+.cube div {
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+  opacity: 0.8;
+  padding: 0rem;
+}
+.cube .front {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+}
+.cube .back {
+  top: 0;
+  transform: translateZ(-20rem);
+  background-color: blue;
+}
+.cube .top {
+  top: 0;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+  background-color: grey;
+}
+.cube .right {
+  top: 0;
+  transform-origin: right;
+  transform: rotateY(270deg);
+  background-color: red;
+}
+.cube .left {
+  top: 0;
+  transform-origin: left;
+  transform: rotateY(-270deg);
+  background-color: red;
+}
+.cube .bottom {
+  top: 0;
+  transform-origin: bottom;
+  transform: rotateX(-270deg);
+  background-color: black;
+}
+.cube:active {
+  transform: rotateX(360deg);
+  transition: transform 600ms;
+}
 
 /*# sourceMappingURL=KBG_style.css.map */

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- ceci est mon CV destiné aux employeurs -->
 		<meta charset="UTF-8"/> <!-- norme utilisée (la plus importante et courante) -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 		<link rel="stylesheet" href="KBG_style.css" />
@@ -9,35 +8,33 @@
 	</head>
 
 	<body>
-		<header class="w-100">
-			<img class="header__logo" src="Pictures/papillon.png" alt="logo">
-			<div class="container-fluid"><!-- introduction d'une grille bootstrap-->
-				<div class="row">
-					<p class="col-offset-1 col-1">Tolérance</p>
+		<div class="container-fluid p-accueil p-0 w-100"> <!-- container principal bootstrap, full width, 0 marge -->
+			<header class="w-100 m-0 position-relative"> <!--header full width 0 marge -->
+				<img class="header__logo position-absolute" style="bottom: -40%; left: 70%" src="Pictures/papillon.png" alt="logo"> <!--photo en position absolue par rapport au header -->
+				<div class="row no-gutter"> <!-- pas de gouttières -->
+					<p class="header__valeur1 col-offset-1 col-1">Tolérance</p>
 					<p class="header__valeur2 col-offset-1 col-1">Empathie</p>
 					<p class="header__valeur3 col-offset-1 col-1">Inclusion</p>
-					<p class="header__valeursom col-offset-4 col-1">KBG</p>
+					<p class="header__valeursom col">KBG</p> <!--espace restant avec un alignement à droite du texte en css -->
 				</div>
-			</div>
-		</header>
-		<nav class="container-fluid"><!-- liste du menu -->
-			<div class="row">
-				<ul class="nav__liste nav__liste--transparent border-dark rounded-circle col-offset-1 col-5">
-					<li class="col-offset-4 col-4">L'association</li>
-					<li class="col-offset-4 col-4"><a href="KBG_page_maladie.html">La maladie</a></li>
-					<li class="col-offset-4 col-4">Témoignages</li>
-					<li class="col-offset-4 col-4">Forum</li>
-					<li class="col-offset-4 col-4">Contact</li>
-				</ul>
-			</div>
-		</nav>
+			</header>
+			<nav> <!-- liste du menu -->
+				<div class="row">
+					<ul class="nowrap nav__liste nav__liste--transparent border-dark rounded-circle col-offset-1 col-5"> <!-- liste spéciale car menu principal + bordure noire cercle pas de retour à la ligne-->
+						<li class="col-offset-4 col-auto">L'association</li>
+						<li class="col-offset-4 col-auto"><a href="KBG_page_maladie.html">La maladie</a></li>
+						<li class="col-offset-4 col-auto">Témoignages</li>
+						<li class="col-offset-4 col-auto">Contact</li>
+						<li class="col-offset-4 col-auto">Forum</li>
+					</ul>
+				</div>
+			</nav>
 			
-		<section>
-		</section>
+			<section>
+			</section>
 
-		<footer>
-		</footer>
-
-	</body>
-
+			<footer>
+			</footer>
+	</div>
+		</body>
 </html>

@@ -1,6 +1,6 @@
-@mixin image_fond ($url:$url_general, $type_background:contain, $couleur_fond:$couleur_fond_gen) {
+@mixin image_fond ($url:$url_general, $couleur_fond:$couleur_fond_gen) {
     background-image: url($url);
-    background-size:$type_background;
+    background-size:135rem, auto; /*largeur définie en rem pour le responsive, hauteur auto*/
     background-repeat:no-repeat;
     background-position:center;
     background-color:$couleur_fond;
@@ -16,18 +16,22 @@
         }
     }
 }
-@mixin responsive ($map:$breakpoint) {
+@mixin resize ($map:$breakpoint) { /*mixin pour adapter les rem selon taille de l'écran (pour plus de breakpoints, en ajouter dans la map) */
     @each $app, $name in $map{
         @media (min-width:map-get($name, min)) and (max-width:map-get($name, max)){
-        font-size:calc(62.5%* (#{map-get($name, abs)}/1350));
-        background-size:calc(100%*(#{map-get($name, abs)}/1350)), auto;
+        font-size:calc(62.5%*(#{map-get($name, abs)}/1350));
         }
+    }
+}
+@mixin responsive_select ($app:"mobile") { /*pour un breakpoint en particulier*/
+    @media(min-width:map-get($app, min)){
+    @content;
     }
 }
 @mixin puce ($map:$breakpoint) {
     @each $app, $name in $map{
         @media (min-width:map-get($name, min)) and (max-width:map-get($name, max)){
-        background-size:calc(100%*(#{map-get($name, abs)}/1350)), auto;
+        background-size:calc(30px*(#{map-get($name, abs)}/1350)), auto;
         }
     }
 }
@@ -48,4 +52,10 @@
             }     
         }
     }
+}
+@mixin marges($top:0, $right:0, $bottom:0, $left:0){ /*marges à zéro par défaut*/
+    margin:$top $right $bottom $left;
+}
+@mixin marges_int($top:0, $right:0, $bottom:0, $left:0){ /*padding à zéro par défaut*/
+    padding:$top $right $bottom $left;
 }

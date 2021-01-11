@@ -1,32 +1,62 @@
 /*.header_papillon{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    perspective:50rem;
-}
-.btn{
-    font-size:2rem;
-    border:0.5rem green dashed;
-    background-color:blue;
-    &:active +.papillon{
-        transform:translateY(-7rem);
-        &>.aileG{
-            transform:rotate3d(1, 1, 0, 90deg) translateZ(1vw);
-        }
-        &>.aileD{
-            transform:rotate3d(1, 1, 0, 90deg) translateZ(1vw);
-        }
-    }
-}
-.aileG{
-    transform-origin:12% 100%;
-    transition:100ms ease-in-out;
-}
-.aileD{
-    transform-origin:0% 0%;
-    transition:100ms ease-in-out;
-}
-.papillon{
+
+*/
+footer{
+    perspective:800px;
     transform-style:preserve-3d;
 }
-*/
+.cube{
+    position:relative;
+    width:20rem;
+    height:20rem;
+    padding:0rem;
+    transform-style:preserve-3d;
+    margin-left:20px;
+        div{
+            width:20rem;
+            height:20rem;
+            position:absolute;
+            opacity:0.8;
+            padding:0rem;
+        }
+        .front{
+            top:0;
+            bottom:0;
+            right:0;
+            left:0;
+            background-color:black;
+        }
+        .back{
+            top:0;
+            transform:translateZ(-20rem);
+            background-color:blue;
+        }
+        .top{
+            top:0;
+            transform-origin:top;
+            transform:rotateX(-90deg);
+            background-color:grey;
+        }
+        .right{
+            top:0;
+            transform-origin:right;
+            transform:rotateY(270deg);
+            background-color:red;
+        }
+        .left{
+            top:0;
+            transform-origin:left;
+            transform:rotateY(-270deg);
+            background-color:red;
+        }
+        .bottom{
+            top:0;
+            transform-origin:bottom;
+            transform:rotateX(-270deg);
+            background-color:black;
+        }
+        &:active{
+        transform:rotateX(360deg);
+        transition:transform 600ms;
+        }
+    }
